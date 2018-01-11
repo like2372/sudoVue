@@ -1,5 +1,0 @@
-like\entity\User.class
-like\controller\UserController.class
-like\Application.class
-like\controller\ArticleController.class
-like\service\ArticleService.class
