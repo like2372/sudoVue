@@ -1,6 +1,8 @@
 <template>
   <div class="head">
-    	head
+    	<div class="title">
+    		<h1>数独游戏</h1>
+    	</div>
   </div>
 </template>
 
@@ -18,5 +20,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.title{
+	width:100%;
+	height:100%;
+}
 
 </style>

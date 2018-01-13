@@ -1,8 +1,7 @@
 <template>
   <div class="sudo">
   	 <router-view name='head'/>
-  	 <router-view name='main' :arr="arr" @arrayChange="arrayChange"/>
-     <router-view name='footer' :arr="arr"/>
+  	 <router-view name='main' :arr="arr" @replaceSudo="replaceSudo"/>
   </div>
 </template>
 
@@ -17,13 +16,15 @@ export default {
       arr:[],
     }
   },created:function(){
-  		this.arr = sudoUtils.getSudoArray();
-			sudoUtils.getHiddenSudoArray(this.arr, 46);  		
+  		  		this.initSudo();
   },methods:{	
-  		arrayChange(){
-  			let sign=sudoUtils.checkSudoArray(this.arr);
-  			alert(sign);
-  		}, 		
+  		replaceSudo(){
+  			this.initSudo();
+  		},
+  		initSudo(){
+  			this.arr = sudoUtils.getSudoArray();
+				sudoUtils.getHiddenSudoArray(this.arr, 55);
+  		}
   }
 }
 </script>
@@ -44,8 +45,8 @@ export default {
 
 .main{
 	width:100%;
-	height:300px;
 	position:relative;
+	margin-top:20px;
 }
 
 .footer{

@@ -107,10 +107,18 @@ export default {
 		
 		return sign;
 		
+	},
+	//根据坐标获取宫的位置
+	getSiteFromIndex(x,y){
+				
+		return 	gong(x,y);
 	}
 
 	
 }
+
+
+
 
 //生成数独
 const makeArray=(arr, n)=>{
@@ -156,7 +164,7 @@ const resetZeroByArray=(arr,n)=>{
 		
 		let ranNum=randomNumber(81);
 		
-		let x = Math.floor(ranNum / 9);
+		let x = Math.floor((ranNum-1) / 9);
 		
 		let y = ranNum % 9;
 		
