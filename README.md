@@ -1,6 +1,6 @@
 # sudu
 
-> sudu
+> 使用es6和vue制作简单的数独游戏
 
 ## Build Setup
 
